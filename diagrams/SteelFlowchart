@@ -1,0 +1,36 @@
+strict digraph SteelFlowchart {
+	1 [label="EBF
+30 Eu/t (LV)
+8.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Banded Iron Dust 2" [label="Banded Iron Dust" color=green style=filled]
+	"Banded Iron Dust 2" -> 1
+	"Carbon Dust 3" [label="Carbon Dust" color=green style=filled]
+	"Carbon Dust 3" -> 1
+	"Pig Iron Ingot" [label="Pig Iron Ingot" color=lightgray style=filled]
+	1 -> "Pig Iron Ingot"
+	"Tiny Pile of Ashes 4" [label="Tiny Pile of Ashes" color=red style=filled]
+	1 -> "Tiny Pile of Ashes 4"
+	5 [label="EBF
+30 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Pig Iron Ingot" [label="Pig Iron Ingot" color=lightgray style=filled]
+	"Pig Iron Ingot" -> 5
+	Oxygen [label=Oxygen color=lightgray style=filled]
+	Oxygen -> 5
+	"Steel Ingot" [label="Steel Ingot" color=orange shape=box style=filled]
+	5 -> "Steel Ingot"
+	6 [label="Electrolytic Cell
+30 Eu/t (LV)
+20.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Nickel Rod 7]" [label="Nickel Rod (NC)" color=yellow style=filled]
+	"Nickel Rod 7]" -> 6
+	"Iron Rod 8]" [label="Iron Rod (NC)" color=yellow style=filled]
+	"Iron Rod 8]" -> 6
+	"Water 9" [label=Water color=green style=filled]
+	"Water 9" -> 6
+	"Sodium Hydroxide Solution 10]" [label="Sodium Hydroxide Solution (NC)" color=yellow style=filled]
+	"Sodium Hydroxide Solution 10]" -> 6
+	"Hydrogen 11" [label=Hydrogen color=red style=filled]
+	6 -> "Hydrogen 11"
+	6 -> Oxygen
+}

@@ -1,0 +1,200 @@
+strict digraph "Stainless Steel" {
+	1 [label="Advanced Arc Furnace
+120 Eu/t (MV)
+30.0 seg" color=lightsalmon shape=hexagon style=filled]
+	Oxygen [label=Oxygen color=lightgray style=filled]
+	Oxygen -> 1
+	Argon [label=Argon color=lightgray style=filled]
+	Argon -> 1
+	"Carburized Stainless Steel" [label="Carburized Stainless Steel" color=lightgray style=filled]
+	"Carburized Stainless Steel" -> 1
+	"Vanadium Dust" [label="Vanadium Dust" color=lightgray style=filled]
+	"Vanadium Dust" -> 1
+	"Ferrochromium Dust" [label="Ferrochromium Dust" color=lightgray style=filled]
+	"Ferrochromium Dust" -> 1
+	"Iron Dust" [label="Iron Dust" color=lightgray style=filled]
+	"Iron Dust" -> 1
+	"Small Pile of Quicklime Dust" [label="Small Pile of Quicklime Dust" color=lightgray style=filled]
+	"Small Pile of Quicklime Dust" -> 1
+	"Stainless Steel" [label="Stainless Steel" color=orange shape=box style=filled]
+	1 -> "Stainless Steel"
+	2 [label="Electrolytic Cell
+30 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Heavy Water" [label="Heavy Water" color=lightgray style=filled]
+	"Heavy Water" -> 2
+	"Stick Nickel 3]" [label="Stick Nickel (NC)" color=yellow style=filled]
+	"Stick Nickel 3]" -> 2
+	"Stick Iron 4]" [label="Stick Iron (NC)" color=yellow style=filled]
+	"Stick Iron 4]" -> 2
+	"Sodium Hydroxide Solution 5]" [label="Sodium Hydroxide Solution (NC)" color=yellow style=filled]
+	"Sodium Hydroxide Solution 5]" -> 2
+	Deuterium [label=Deuterium color=lightgray style=filled]
+	2 -> Deuterium
+	2 -> Oxygen
+	6 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Heavy Hydrogen Sulfide" [label="Impure Heavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Heavy Hydrogen Sulfide" -> 6
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 6
+	6 -> "Heavy Water"
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	6 -> "Impure Semiheavy Hydrogen Sulfide"
+	7 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Semiheavy Hydrogen Sulfide" [label="Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Semiheavy Hydrogen Sulfide" -> 7
+	"Semiheavy Water" [label="Semiheavy Water" color=lightgray style=filled]
+	"Semiheavy Water" -> 7
+	7 -> "Impure Heavy Hydrogen Sulfide"
+	7 -> "Distilled Water"
+	8 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" -> 8
+	"Impure Semiheavy Water" [label="Impure Semiheavy Water" color=lightgray style=filled]
+	"Impure Semiheavy Water" -> 8
+	8 -> "Semiheavy Hydrogen Sulfide"
+	"Steam 9" [label=Steam color=red style=filled]
+	8 -> "Steam 9"
+	10 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Water" [label="Impure Semiheavy Water" color=lightgray style=filled]
+	"Impure Semiheavy Water" -> 10
+	"Isotopically Pure Hydrogen Sulfide" [label="Isotopically Pure Hydrogen Sulfide" color=lightgray style=filled]
+	"Isotopically Pure Hydrogen Sulfide" -> 10
+	10 -> "Impure Semiheavy Hydrogen Sulfide"
+	"Salt Water" [label="Salt Water" color=lightgray style=filled]
+	10 -> "Salt Water"
+	11 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" -> 11
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 11
+	11 -> "Impure Semiheavy Water"
+	"Hydrogen Sulfide" [label="Hydrogen Sulfide" color=lightgray style=filled]
+	11 -> "Hydrogen Sulfide"
+	12 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Semiheavy Hydrogen Sulfide" [label="Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Semiheavy Hydrogen Sulfide" -> 12
+	"Semiheavy Water" [label="Semiheavy Water" color=lightgray style=filled]
+	"Semiheavy Water" -> 12
+	12 -> "Impure Heavy Hydrogen Sulfide"
+	12 -> "Distilled Water"
+	13 [label="Large Chemical Reactor
+480 Eu/t (HV)
+50.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Semiheavy Hydrogen Sulfide" [label="Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Semiheavy Hydrogen Sulfide" -> 13
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 13
+	13 -> "Semiheavy Water"
+	"Hydrogen Sulfide" [label="Hydrogen Sulfide" color=lightgray style=filled]
+	13 -> "Hydrogen Sulfide"
+	14 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Hydrogen Sulfide" [label="Hydrogen Sulfide" color=lightgray style=filled]
+	"Hydrogen Sulfide" -> 14
+	"Sea Water" [label="Sea Water" color=lightgray style=filled]
+	"Sea Water" -> 14
+	14 -> "Impure Semiheavy Water"
+	14 -> "Isotopically Pure Hydrogen Sulfide"
+	15 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" -> 15
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 15
+	15 -> "Impure Semiheavy Water"
+	15 -> "Hydrogen Sulfide"
+	16 [label="EBF
+240.0 Eu/t (HV)
+40.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Iron Dust" [label="Iron Dust" color=lightgray style=filled]
+	"Iron Dust" -> 16
+	"Nickel Dust" [label="Nickel Dust" color=lightgray style=filled]
+	"Nickel Dust" -> 16
+	"Tiny Pile of Manganese Dust" [label="Tiny Pile of Manganese Dust" color=lightgray style=filled]
+	"Tiny Pile of Manganese Dust" -> 16
+	16 -> "Carburized Stainless Steel"
+	17 [label="Electrolyzer
+30 Eu/t (LV)
+15.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Iron III Chloride" [label="Iron III Chloride" color=lightgray style=filled]
+	"Iron III Chloride" -> 17
+	"Graphite Electrode 18]" [label="Graphite Electrode (NC)" color=yellow style=filled]
+	"Graphite Electrode 18]" -> 17
+	"Stick Iron 19]" [label="Stick Iron (NC)" color=yellow style=filled]
+	"Stick Iron 19]" -> 17
+	Chlorine [label=Chlorine color=lightgray style=filled]
+	17 -> Chlorine
+	17 -> "Iron Dust"
+	20 [label="Electrolytic Cell
+120 Eu/t (MV)
+12.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Nickel Sulfate Solution" [label="Nickel Sulfate Solution" color=lightgray style=filled]
+	"Nickel Sulfate Solution" -> 20
+	"Water 21" [label=Water color=green style=filled]
+	"Water 21" -> 20
+	"Stick Nickel 22]" [label="Stick Nickel (NC)" color=yellow style=filled]
+	"Stick Nickel 22]" -> 20
+	"Graphite Electrode 23]" [label="Graphite Electrode (NC)" color=yellow style=filled]
+	"Graphite Electrode 23]" -> 20
+	20 -> "Nickel Dust"
+	"Diluted Sulfuric Acid" [label="Diluted Sulfuric Acid" color=lightgray style=filled]
+	20 -> "Diluted Sulfuric Acid"
+	20 -> Oxygen
+	24 [label="Packager
+12 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	Manganese [label=Manganese color=lightgray style=filled]
+	Manganese -> 24
+	24 -> "Tiny Pile of Manganese Dust"
+	25 [label="Packager
+12 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Tiny Pile of Manganese Dust" [label="Tiny Pile of Manganese Dust" color=lightgray style=filled]
+	"Tiny Pile of Manganese Dust" -> 25
+	25 -> Manganese
+	26 [label="Advanced Arc Furnace
+120 Eu/t (MV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Chromite Dust" [label="Chromite Dust" color=lightgray style=filled]
+	"Chromite Dust" -> 26
+	"Carbon Dust 27" [label="Carbon Dust" color=green style=filled]
+	"Carbon Dust 27" -> 26
+	"Tiny Pile of Quicklime Dust" [label="Tiny Pile of Quicklime Dust" color=lightgray style=filled]
+	"Tiny Pile of Quicklime Dust" -> 26
+	26 -> "Ferrochromium Dust"
+	"Carbon Monoxide" [label="Carbon Monoxide" color=lightgray style=filled]
+	26 -> "Carbon Monoxide"
+	28 [label="Packager
+12 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	Quicklime [label=Quicklime color=lightgray style=filled]
+	Quicklime -> 28
+	28 -> "Tiny Pile of Quicklime Dust"
+	29 [label="Packager
+12 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Tiny Pile of Quicklime Dust" [label="Tiny Pile of Quicklime Dust" color=lightgray style=filled]
+	"Tiny Pile of Quicklime Dust" -> 29
+	29 -> Quicklime
+	30 [label="Packager
+12 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	Quicklime [label=Quicklime color=lightgray style=filled]
+	Quicklime -> 30
+	30 -> "Small Pile of Quicklime Dust"
+}

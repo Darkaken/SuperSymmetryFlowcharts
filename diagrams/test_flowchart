@@ -1,0 +1,19 @@
+strict digraph test_flowchart {
+	1 [label="Electrolytic Cell
+40 Eu/t (MV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Alumina Dust" [label="Alumina Dust" color=lightgray style=filled]
+	"Alumina Dust" -> 1
+	"Aluminium Trifluoride Dust" [label="Aluminium Trifluoride Dust" color=lightgray style=filled]
+	"Aluminium Trifluoride Dust" -> 1
+	"Carbon Dust 2" [label="Carbon Dust" color=green style=filled]
+	"Carbon Dust 2" -> 1
+	"Cryolite 3]" [label="Cryolite (NC)" color=yellow style=filled]
+	"Cryolite 3]" -> 1
+	"Hydrogen Fluoride" [label="Hydrogen Fluoride" color=lightgray style=filled]
+	1 -> "Hydrogen Fluoride"
+	"Carbon Dioxide" [label="Carbon Dioxide" color=lightgray style=filled]
+	1 -> "Carbon Dioxide"
+	"Aluminium Ingot" [label="Aluminium Ingot" color=orange shape=box style=filled]
+	1 -> "Aluminium Ingot"
+}

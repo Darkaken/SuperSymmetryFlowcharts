@@ -1,0 +1,16 @@
+
+ROASTER.recipeBuilder()
+.inputs(ore('dustPyrite') * 2)
+.outputs(metaitem('dustIronIiiSulfate'))
+.outputs(metaitem('dustSulfur'))
+.duration(80)
+.EUt(7)
+.buildAndRegister()
+
+ROASTER.recipeBuilder()
+.inputs(ore('dustIronIiiSulfate'))
+.outputs(metaitem('dustBandedIron'))
+.fluidOutputs(fluid('sulfur_trioxide') * 3000)
+.duration(160)
+.EUt(7)
+.buildAndRegister()

@@ -1,0 +1,32 @@
+FermentingChain: parser
+ResinChain: parser
+
+AluminiumChain: parser + manual
+ChromiumChain: parser (modified sintering fuels)
+FluorineChain: parser
+IronChain: parser + manual
+ManganeseChain: parser + manual
+NickelChain: parser + manual
+OxygenChain: parser
+PhosphorusChain: parser + manual
+SiliconChain: parser + manual
+SulfurChain: parser
+TitaniumChain: parser + manual
+
+PolytetrafluoroethyleneChain: parser
+
+AirDistillation: parser
+DeuteriumChain: parser
+ElectrolysisOverhaul: parser
+PaperChain: parser
+StainlessSteelChain: parser + manual
+
+IntegratedCircuits: parser
+
+Drone: parser (modified solders)
+
+
+
+TODO:
+
+1) Manage ChancedOutputs

@@ -1,0 +1,89 @@
+strict digraph AluminumFlowchart {
+	1 [label="Roaster
+16 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Bauxite Dust 2" [label="Bauxite Dust" color=green style=filled]
+	"Bauxite Dust 2" -> 1
+	"Sodium Hydroxide Solution" [label="Sodium Hydroxide Solution" color=lightgray style=filled]
+	"Sodium Hydroxide Solution" -> 1
+	"Impure Sodium Aluminate Solution" [label="Impure Sodium Aluminate Solution" color=lightgray style=filled]
+	1 -> "Impure Sodium Aluminate Solution"
+	3 [label="Centrifuge
+16 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Sodium Aluminate Solution" [label="Impure Sodium Aluminate Solution" color=lightgray style=filled]
+	"Impure Sodium Aluminate Solution" -> 3
+	"Sodium Aluminate Solution" [label="Sodium Aluminate Solution" color=lightgray style=filled]
+	3 -> "Sodium Aluminate Solution"
+	"Red Mud 4" [label="Red Mud" color=red style=filled]
+	3 -> "Red Mud 4"
+	5 [label="Crystallizer
+16 Eu/t (LV)
+15.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sodium Aluminate Solution" [label="Sodium Aluminate Solution" color=lightgray style=filled]
+	"Sodium Aluminate Solution" -> 5
+	"Water 6" [label=Water color=green style=filled]
+	"Water 6" -> 5
+	"Aluminum Hydroxide Dust 7]" [label="Aluminum Hydroxide Dust (NC)" color=yellow style=filled]
+	"Aluminum Hydroxide Dust 7]" -> 5
+	5 -> "Aluminum Hydroxide Dust"
+	"Impure Sodium Hydroxide Solution" [label="Impure Sodium Hydroxide Solution" color=lightgray style=filled]
+	5 -> "Impure Sodium Hydroxide Solution"
+	8 [label="Electrolyzer
+30 Eu/t (LV)
+15.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Sodium Hydroxide Solution" [label="Impure Sodium Hydroxide Solution" color=lightgray style=filled]
+	"Impure Sodium Hydroxide Solution" -> 8
+	"Steel Rod 9]" [label="Steel Rod (NC)" color=yellow style=filled]
+	"Steel Rod 9]" -> 8
+	"Graphite Electrode 10]" [label="Graphite Electrode (NC)" color=yellow style=filled]
+	"Graphite Electrode 10]" -> 8
+	8 -> "Sodium Hydroxide Solution"
+	"Gallium Dust 11" [label="Gallium Dust" color=red style=filled]
+	8 -> "Gallium Dust 11"
+	12 [label="EBF
+40 Eu/t (MV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Aluminum Hydroxide Dust" [label="Aluminum Hydroxide Dust" color=lightgray style=filled]
+	"Aluminum Hydroxide Dust" -> 12
+	"Alumina Dust" [label="Alumina Dust" color=lightgray style=filled]
+	12 -> "Alumina Dust"
+	"Steam 13" [label=Steam color=red style=filled]
+	12 -> "Steam 13"
+	14 [label="Roaster
+16 Eu/t (LV)
+15.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Alumina Dust" [label="Alumina Dust" color=lightgray style=filled]
+	"Alumina Dust" -> 14
+	"Hydrofluoric Acid" [label="Hydrofluoric Acid" color=lightgray style=filled]
+	"Hydrofluoric Acid" -> 14
+	"Aluminum Triflouride Dust" [label="Aluminum Triflouride Dust" color=lightgray style=filled]
+	14 -> "Aluminum Triflouride Dust"
+	"Steam 15" [label=Steam color=red style=filled]
+	14 -> "Steam 15"
+	16 [label="Electrolytic Cell
+40 Eu/t (MV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Alumina Dust" [label="Alumina Dust" color=lightgray style=filled]
+	"Alumina Dust" -> 16
+	"Aluminum Triflouride Dust" [label="Aluminum Triflouride Dust" color=lightgray style=filled]
+	"Aluminum Triflouride Dust" -> 16
+	"Carbon Dust 17" [label="Carbon Dust" color=green style=filled]
+	"Carbon Dust 17" -> 16
+	"Cryolite 18]" [label="Cryolite (NC)" color=yellow style=filled]
+	"Cryolite 18]" -> 16
+	"Aluminum Ingot" [label="Aluminum Ingot" color=orange shape=box style=filled]
+	16 -> "Aluminum Ingot"
+	"Cabon Dioxide 19" [label="Cabon Dioxide" color=red style=filled]
+	16 -> "Cabon Dioxide 19"
+	"Hydrogen Flouride" [label="Hydrogen Flouride" color=lightgray style=filled]
+	16 -> "Hydrogen Flouride"
+	20 [label="Bubble Column Reactor
+7 Eu/t (LV)
+0.05 seg" color=lightsalmon shape=hexagon style=filled]
+	"Hydrogen Flouride" [label="Hydrogen Flouride" color=lightgray style=filled]
+	"Hydrogen Flouride" -> 20
+	"Water 21" [label=Water color=green style=filled]
+	"Water 21" -> 20
+	20 -> "Hydrofluoric Acid"
+}

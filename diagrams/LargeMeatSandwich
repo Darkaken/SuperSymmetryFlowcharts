@@ -1,0 +1,139 @@
+strict digraph LargeMeatSandwich {
+	1 [label="Cutting Saw
+18 Eu/t (LV)
+3.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Water 2" [label=Water color=green style=filled]
+	"Water 2" -> 1
+	Baguette [label=Baguette color=lightgray style=filled]
+	Baguette -> 1
+	"Pre-Sliced Baguette" [label="Pre-Sliced Baguette" color=lightgray style=filled]
+	1 -> "Pre-Sliced Baguette"
+	3 [label="Electric Baking Oven
+51 Eu/t (MV)
+1.85 seg" color=lightsalmon shape=hexagon style=filled]
+	"Unbaked Baguette" [label="Unbaked Baguette" color=lightgray style=filled]
+	"Unbaked Baguette" -> 3
+	3 -> Baguette
+	4 [label="Forming Press
+20 Eu/t (LV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	Dough [label=Dough color=lightgray style=filled]
+	Dough -> 4
+	"Baguette Wooden Form 5]" [label="Baguette Wooden Form (NC)" color=yellow style=filled]
+	"Baguette Wooden Form 5]" -> 4
+	4 -> "Unbaked Baguette"
+	6 [label="Mixer
+8 Eu/t (LV)
+7.5 seg" color=lightsalmon shape=hexagon style=filled]
+	Flour [label=Flour color=lightgray style=filled]
+	Flour -> 6
+	"Tiny Pile of Salt 7" [label="Tiny Pile of Salt" color=green style=filled]
+	"Tiny Pile of Salt 7" -> 6
+	"Water 8" [label=Water color=green style=filled]
+	"Water 8" -> 6
+	6 -> Dough
+	9 [label="Cuisine Assembler
+75 Eu/t (MV)
+6.75 seg" color=lightsalmon shape=hexagon style=filled]
+	"Pre-Sliced Baguette" [label="Pre-Sliced Baguette" color=lightgray style=filled]
+	"Pre-Sliced Baguette" -> 9
+	"Cheddar Slice" [label="Cheddar Slice" color=lightgray style=filled]
+	"Cheddar Slice" -> 9
+	"Cooked Meat Ingot" [label="Cooked Meat Ingot" color=lightgray style=filled]
+	"Cooked Meat Ingot" -> 9
+	"Large Meat Sandwich" [label="Large Meat Sandwich" color=orange shape=box style=filled]
+	9 -> "Large Meat Sandwich"
+	10 [label="Slicer
+16 Eu/t (LV)
+4.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Cheddar Block" [label="Cheddar Block" color=lightgray style=filled]
+	"Cheddar Block" -> 10
+	"Slicer Blade (Flat) 11]" [label="Slicer Blade (Flat) (NC)" color=yellow style=filled]
+	"Slicer Blade (Flat) 11]" -> 10
+	10 -> "Cheddar Slice"
+	12 [label="Canning Machine
+8 Eu/t (LV)
+2.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Aged Cheddar Mold" [label="Aged Cheddar Mold" color=lightgray style=filled]
+	"Aged Cheddar Mold" -> 12
+	12 -> "Cheddar Block"
+	"Mold (Block)" [label="Mold (Block)" color=lightgray style=filled]
+	12 -> "Mold (Block)"
+	13 [label="Compressor
+16 Eu/t (LV)
+300.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Cheddar Curd Mold" [label="Cheddar Curd Mold" color=lightgray style=filled]
+	"Cheddar Curd Mold" -> 13
+	13 -> "Aged Cheddar Mold"
+	14 [label="Canning Machine
+4 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Cut Curd" [label="Cut Curd" color=lightgray style=filled]
+	"Cut Curd" -> 14
+	"Mold (Block)" [label="Mold (Block)" color=lightgray style=filled]
+	"Mold (Block)" -> 14
+	14 -> "Cheddar Curd Mold"
+	15 [label="Slicer
+16 Eu/t (LV)
+2.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Coagulated Milk Curd" [label="Coagulated Milk Curd" color=lightgray style=filled]
+	"Coagulated Milk Curd" -> 15
+	"Slicer Blade (Stripes) 16]" [label="Slicer Blade (Stripes) (NC)" color=yellow style=filled]
+	"Slicer Blade (Stripes) 16]" -> 15
+	15 -> "Cut Curd"
+	17 [label="Centrifuge
+30 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	Milk [label=Milk color=lightgray style=filled]
+	Milk -> 17
+	"Crude Rennet Solution 18" [label="Crude Rennet Solution" color=green style=filled]
+	"Crude Rennet Solution 18" -> 17
+	"Whey 19" [label=Whey color=red style=filled]
+	17 -> "Whey 19"
+	17 -> "Coagulated Milk Curd"
+	20 [label="Mob Extractor
+16 Eu/t (LV)
+1.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Cow 21" [label=Cow color=green style=filled]
+	"Cow 21" -> 20
+	20 -> Milk
+	22 [label="Electric Baking Oven
+21 Eu/t (LV)
+2.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Toughened Meat" [label="Toughened Meat" color=lightgray style=filled]
+	"Toughened Meat" -> 22
+	22 -> "Cooked Meat Ingot"
+	23 [label="Mixer
+16 Eu/t (LV)
+4.5 seg" color=lightsalmon shape=hexagon style=filled]
+	Flour [label=Flour color=lightgray style=filled]
+	Flour -> 23
+	"Mince Meat" [label="Mince Meat" color=lightgray style=filled]
+	"Mince Meat" -> 23
+	"Water 24" [label=Water color=green style=filled]
+	"Water 24" -> 23
+	23 -> "Toughened Meat"
+	25 [label="Macerator
+2 Eu/t (LV)
+4.9 seg" color=lightsalmon shape=hexagon style=filled]
+	"Wheat 26" [label=Wheat color=green style=filled]
+	"Wheat 26" -> 25
+	25 -> Flour
+	27 [label="Macerator
+20 Eu/t (LV)
+20.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Raw Beef | Raw Porkchop | Raw Chicken" [label="Raw Beef | Raw Porkchop | Raw Chicken" color=lightgray style=filled]
+	"Raw Beef | Raw Porkchop | Raw Chicken" -> 27
+	27 -> "Mince Meat"
+	"Small Pile of Bone Meal 28" [label="Small Pile of Bone Meal" color=red style=filled]
+	27 -> "Small Pile of Bone Meal 28"
+	"Animal Fat 29" [label="Animal Fat" color=red style=filled]
+	27 -> "Animal Fat 29"
+	30 [label="Drone Pad
+4 Eu/t (LV)
+40.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Basic Drone" [label="Basic Drone" color=lightgray style=filled]
+	"Basic Drone" -> 30
+	30 -> "Basic Drone"
+	30 -> "Raw Beef | Raw Porkchop | Raw Chicken"
+}

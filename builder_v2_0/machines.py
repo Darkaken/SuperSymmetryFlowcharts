@@ -7,7 +7,7 @@ def create_machine_dict():
 
     single_block_machines = [
         "Air Collector",
-        "Alloy Furnace",
+        "Alloy Smelter",
         "Amplifabricator",
         "Arc Furnace",
         "Assembler",
@@ -34,6 +34,7 @@ def create_machine_dict():
         "Electric Furnace",
         "Electrolyzer",
         "Electromagnetic Separator",
+        "Electrostatic Separator",
         "Extractor",
         "Fermenter",
         "Fisher",
@@ -61,6 +62,7 @@ def create_machine_dict():
         "Sifting Machine",
         "Slicer",
         "Thermal Centrifuge",
+        "Trickle Bed Reactor",
         "Vacuum Chamber",
         "Wiremill",
         "Unpackager",
@@ -69,7 +71,9 @@ def create_machine_dict():
 
     multi_block_machines = [
         "Advanced Arc Furnace",
+        "Catalytic Reformer",
         "Clarifier",
+        "Coking Tower",
         "Distillation Tower",
         "Drone Pad",
         "EBF",
@@ -91,6 +95,8 @@ def create_machine_dict():
         "Single Column Cryogenic Distillation Plant",
         "Sintering Oven",
         "Smoke Stack",
+        "Oil Cracking Unit",
+        "Vacuum Distillation Tower",
         "Vacuum Freezer"
     ]
 

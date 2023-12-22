@@ -63,6 +63,7 @@ def iteration(recipeBuilderGlobal: RecipeBuilder, output: str, base: RecipeBuild
 
         print(f"Cant find recipe for: {output}") # this is correct
         base.valid = False
+        return
 
     if len(possible_recipes) > 1:
         next_recipe = random.choice(possible_recipes)  # selects one recipe from available at random

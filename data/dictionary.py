@@ -24,6 +24,8 @@ def ReplaceMachineName(machine : str):
         "br": "batch_reactor",
         "cutter": "cutting_machine",
         "cvd" : "cvd_unit",
+        "cracker" : "oil_cracking_unit",
+        "coking" : "coking_tower",
         "dt" : "distillation_tower",
         "emseparator" : "electromagnetic_separator",
         "ebf_recipes" : "ebf",
@@ -37,10 +39,13 @@ def ReplaceMachineName(machine : str):
         "psa" : "pressure_swing_absorber",
         "primitiveblastfurnace" : "pbf",
         "polymerization" : "polymerization_tank",
+        "reformer" : "catalytic_reformer",
         "rf": "reaction_furnace",
         "sifter" : "sifting_machine",
         "sintering_recipes" : "sintering_oven",
+        "tbr": "trickle_bed_reactor",
         "vacuumchamber" : "vacuum_chamber",
+        "vacuum_dt" : "vacuum_distillation_tower",
         "zonerefiner" : "zone_refiner"
     }
 

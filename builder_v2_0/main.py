@@ -8,13 +8,13 @@ if __name__ == '__main__':
 
     # build recipe map
 
-    expected_output = "Aluminium Ingot" #input("Please insert desired output: ")
+    expected_output = "Gasoline" #input("Please insert desired output: ")
 
     # validate output
 
     rate = 0 #float(input("Please insert desired output rate per second: "))
 
-    builder = buildprocess(expected_output, 0, "mv")
+    builder = buildprocess(expected_output, 0, "hv")
 
     print(builder.recipes)
 

@@ -1,19 +1,397 @@
 strict digraph test_flowchart {
-	1 [label="Electrolytic Cell
-40 Eu/t (MV)
+	1 [label="Distillation Tower
+60.0 Eu/t (MV)
+30.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Severely Hydrocracked Kerosene" [label="Severely Hydrocracked Kerosene" color=lightgray style=filled]
+	"Severely Hydrocracked Kerosene" -> 1
+	Gasoline [label=Gasoline color=orange shape=box style=filled]
+	1 -> Gasoline
+	Naphtha [label=Naphtha color=lightgray style=filled]
+	1 -> Naphtha
+	Butane [label=Butane color=lightgray style=filled]
+	1 -> Butane
+	Propane [label=Propane color=lightgray style=filled]
+	1 -> Propane
+	Ethane [label=Ethane color=lightgray style=filled]
+	1 -> Ethane
+	Methane [label=Methane color=lightgray style=filled]
+	1 -> Methane
+	2 [label="Oil Cracking Unit
+60 Eu/t (MV)
+13.0 seg" color=lightsalmon shape=hexagon style=filled]
+	Kerosene [label=Kerosene color=lightgray style=filled]
+	Kerosene -> 2
+	"Hot High- Pressure Hydrogen" [label="Hot High- Pressure Hydrogen" color=lightgray style=filled]
+	"Hot High- Pressure Hydrogen" -> 2
+	2 -> "Severely Hydrocracked Kerosene"
+	3 [label="Distillation Tower
+60.0 Eu/t (MV)
+30.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Severely Steamcracked Gasoline" [label="Severely Steamcracked Gasoline" color=lightgray style=filled]
+	"Severely Steamcracked Gasoline" -> 3
+	3 -> Kerosene
+	Naphtha [label=Naphtha color=lightgray style=filled]
+	3 -> Naphtha
+	Toluene [label=Toluene color=lightgray style=filled]
+	3 -> Toluene
+	Benzene [label=Benzene color=lightgray style=filled]
+	3 -> Benzene
+	Butene [label=Butene color=lightgray style=filled]
+	3 -> Butene
+	Butadiene [label=Butadiene color=lightgray style=filled]
+	3 -> Butadiene
+	Propane [label=Propane color=lightgray style=filled]
+	3 -> Propane
+	Propene [label=Propene color=lightgray style=filled]
+	3 -> Propene
+	Ethane [label=Ethane color=lightgray style=filled]
+	3 -> Ethane
+	Ethylene [label=Ethylene color=lightgray style=filled]
+	3 -> Ethylene
+	Methane [label=Methane color=lightgray style=filled]
+	3 -> Methane
+	4 [label="Oil Cracking Unit
+60 Eu/t (MV)
+13.0 seg" color=lightsalmon shape=hexagon style=filled]
+	Gasoline [label=Gasoline color=lightgray style=filled]
+	Gasoline -> 4
+	"Hot High- Pressure Steam" [label="Hot High- Pressure Steam" color=lightgray style=filled]
+	"Hot High- Pressure Steam" -> 4
+	4 -> "Severely Steamcracked Gasoline"
+	5 [label="Distillation Tower
+60.0 Eu/t (MV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Alkylated Refinery Gas" [label="Alkylated Refinery Gas" color=lightgray style=filled]
+	"Alkylated Refinery Gas" -> 5
+	"Sulfuric Acid" [label="Sulfuric Acid" color=lightgray style=filled]
+	5 -> "Sulfuric Acid"
+	5 -> Gasoline
+	6 [label="CSTR
+30 Eu/t (LV)
+0.25 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sulfuric Acid" [label="Sulfuric Acid" color=lightgray style=filled]
+	"Sulfuric Acid" -> 6
+	"Refinery Gas" [label="Refinery Gas" color=lightgray style=filled]
+	"Refinery Gas" -> 6
+	6 -> "Alkylated Refinery Gas"
+	7 [label="Distillation Tower
+60.0 Eu/t (MV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Alkylated Natural Gas" [label="Alkylated Natural Gas" color=lightgray style=filled]
+	"Alkylated Natural Gas" -> 7
+	7 -> "Sulfuric Acid"
+	7 -> Gasoline
+	8 [label="CSTR
+30 Eu/t (LV)
+0.25 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sulfuric Acid" [label="Sulfuric Acid" color=lightgray style=filled]
+	"Sulfuric Acid" -> 8
+	"Natural Gas" [label="Natural Gas" color=lightgray style=filled]
+	"Natural Gas" -> 8
+	8 -> "Alkylated Natural Gas"
+	9 [label="Distillation Tower
+30 Eu/t (LV)
 5.0 seg" color=lightsalmon shape=hexagon style=filled]
-	"Alumina Dust" [label="Alumina Dust" color=lightgray style=filled]
-	"Alumina Dust" -> 1
-	"Aluminium Trifluoride Dust" [label="Aluminium Trifluoride Dust" color=lightgray style=filled]
-	"Aluminium Trifluoride Dust" -> 1
-	"Carbon Dust 2" [label="Carbon Dust" color=green style=filled]
-	"Carbon Dust 2" -> 1
-	"Cryolite 3]" [label="Cryolite (NC)" color=yellow style=filled]
-	"Cryolite 3]" -> 1
-	"Hydrogen Fluoride" [label="Hydrogen Fluoride" color=lightgray style=filled]
-	1 -> "Hydrogen Fluoride"
-	"Carbon Dioxide" [label="Carbon Dioxide" color=lightgray style=filled]
-	1 -> "Carbon Dioxide"
-	"Aluminium Ingot" [label="Aluminium Ingot" color=orange shape=box style=filled]
-	1 -> "Aluminium Ingot"
+	"Treated Sulfuric Natural Gas" [label="Treated Sulfuric Natural Gas" color=lightgray style=filled]
+	"Treated Sulfuric Natural Gas" -> 9
+	9 -> "Natural Gas"
+	"Sour Gas" [label="Sour Gas" color=lightgray style=filled]
+	9 -> "Sour Gas"
+	10 [label="Fixed Bed Reactor
+30 Eu/t (LV)
+1.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sulfuric Natural Gas" [label="Sulfuric Natural Gas" color=lightgray style=filled]
+	"Sulfuric Natural Gas" -> 10
+	Hydrogen [label=Hydrogen color=lightgray style=filled]
+	Hydrogen -> 10
+	"Alumina Catalyst Bed 11]" [label="Alumina Catalyst Bed (NC)" color=yellow style=filled]
+	"Alumina Catalyst Bed 11]" -> 10
+	10 -> "Treated Sulfuric Natural Gas"
+	12 [label="Centrifuge
+30 Eu/t (LV)
+20.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Crude Natural Gas" [label="Crude Natural Gas" color=lightgray style=filled]
+	"Crude Natural Gas" -> 12
+	Oil [label=Oil color=lightgray style=filled]
+	12 -> Oil
+	12 -> "Sulfuric Natural Gas"
+	13 [label="Batch Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Ferrochromium Dust" [label="Ferrochromium Dust" color=lightgray style=filled]
+	"Ferrochromium Dust" -> 13
+	"Ammonium Sulfate Dust" [label="Ammonium Sulfate Dust" color=lightgray style=filled]
+	"Ammonium Sulfate Dust" -> 13
+	"Reduced Chromium Anolyte" [label="Reduced Chromium Anolyte" color=lightgray style=filled]
+	"Reduced Chromium Anolyte" -> 13
+	"Sulfuric Acid" [label="Sulfuric Acid" color=lightgray style=filled]
+	"Sulfuric Acid" -> 13
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 13
+	13 -> Hydrogen
+	"Dissolved Ferrochromium" [label="Dissolved Ferrochromium" color=lightgray style=filled]
+	13 -> "Dissolved Ferrochromium"
+	14 [label="Advanced Arc Furnace
+120 Eu/t (MV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Chromite Dust" [label="Chromite Dust" color=lightgray style=filled]
+	"Chromite Dust" -> 14
+	"Carbon Dust 15" [label="Carbon Dust" color=green style=filled]
+	"Carbon Dust 15" -> 14
+	"Tiny Pile of Pile Of Quicklime Dust" [label="Tiny Pile of Pile Of Quicklime Dust" color=lightgray style=filled]
+	"Tiny Pile of Pile Of Quicklime Dust" -> 14
+	14 -> "Ferrochromium Dust"
+	"Carbon Monoxide" [label="Carbon Monoxide" color=lightgray style=filled]
+	14 -> "Carbon Monoxide"
+	16 [label="Distillery
+120 Eu/t (MV)
+0.25 seg" color=lightsalmon shape=hexagon style=filled]
+	"Ammonium Sulfate Solution" [label="Ammonium Sulfate Solution" color=lightgray style=filled]
+	"Ammonium Sulfate Solution" -> 16
+	16 -> "Ammonium Sulfate Dust"
+	"Water 17" [label=Water color=red style=filled]
+	16 -> "Water 17"
+	18 [label="Bubble Column Reactor
+120 Eu/t (MV)
+0.25 seg" color=lightsalmon shape=hexagon style=filled]
+	Ammonia [label=Ammonia color=lightgray style=filled]
+	Ammonia -> 18
+	"Diluted Sulfuric Acid" [label="Diluted Sulfuric Acid" color=lightgray style=filled]
+	"Diluted Sulfuric Acid" -> 18
+	18 -> "Ammonium Sulfate Solution"
+	19 [label="Electrolytic Cell
+120 Eu/t (MV)
+12.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Nickel Sulfate Solution" [label="Nickel Sulfate Solution" color=lightgray style=filled]
+	"Nickel Sulfate Solution" -> 19
+	"Water 20" [label=Water color=green style=filled]
+	"Water 20" -> 19
+	"Stick Nickel 21]" [label="Stick Nickel (NC)" color=yellow style=filled]
+	"Stick Nickel 21]" -> 19
+	"Graphite Electrode 22]" [label="Graphite Electrode (NC)" color=yellow style=filled]
+	"Graphite Electrode 22]" -> 19
+	"Nickel Dust" [label="Nickel Dust" color=lightgray style=filled]
+	19 -> "Nickel Dust"
+	19 -> "Diluted Sulfuric Acid"
+	Oxygen [label=Oxygen color=lightgray style=filled]
+	19 -> Oxygen
+	23 [label="Bubble Column Reactor
+30 Eu/t (LV)
+0.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Chromium Anolyte" [label="Chromium Anolyte" color=lightgray style=filled]
+	"Chromium Anolyte" -> 23
+	"Sulfur Dioxide" [label="Sulfur Dioxide" color=lightgray style=filled]
+	"Sulfur Dioxide" -> 23
+	23 -> "Reduced Chromium Anolyte"
+	24 [label="Electrolytic Cell
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Purified Ammonium Chrome Alum Solution" [label="Purified Ammonium Chrome Alum Solution" color=lightgray style=filled]
+	"Purified Ammonium Chrome Alum Solution" -> 24
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 24
+	"Stainless Steel Plate 25]" [label="Stainless Steel Plate (NC)" color=yellow style=filled]
+	"Stainless Steel Plate 25]" -> 24
+	"Silver Plate 26]" [label="Silver Plate (NC)" color=yellow style=filled]
+	"Silver Plate 26]" -> 24
+	"Foil Asbestos 27]" [label="Foil Asbestos (NC)" color=yellow style=filled]
+	"Foil Asbestos 27]" -> 24
+	Oxygen [label=Oxygen color=lightgray style=filled]
+	24 -> Oxygen
+	24 -> "Chromium Anolyte"
+	"Chromium Catholyte" [label="Chromium Catholyte" color=lightgray style=filled]
+	24 -> "Chromium Catholyte"
+	28 [label="Batch Reactor
+30 Eu/t (LV)
+40.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Heated Water" [label="Heated Water" color=lightgray style=filled]
+	"Heated Water" -> 28
+	"Ammonium Chrome Alum Dust" [label="Ammonium Chrome Alum Dust" color=lightgray style=filled]
+	"Ammonium Chrome Alum Dust" -> 28
+	28 -> "Purified Ammonium Chrome Alum Solution"
+	29 [label="Crystallizer
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Aged Ammonium Chrome Alum Solution" [label="Aged Ammonium Chrome Alum Solution" color=lightgray style=filled]
+	"Aged Ammonium Chrome Alum Solution" -> 29
+	29 -> "Ammonium Chrome Alum Dust"
+	"Chromium Mother Liquor" [label="Chromium Mother Liquor" color=lightgray style=filled]
+	29 -> "Chromium Mother Liquor"
+	30 [label="Batch Reactor
+30 Eu/t (LV)
+40.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Warm Water" [label="Warm Water" color=lightgray style=filled]
+	"Warm Water" -> 30
+	"Chromium Catholyte" [label="Chromium Catholyte" color=lightgray style=filled]
+	"Chromium Catholyte" -> 30
+	30 -> "Aged Ammonium Chrome Alum Solution"
+	31 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Semiheavy Hydrogen Sulfide" [label="Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Semiheavy Hydrogen Sulfide" -> 31
+	"Semiheavy Water" [label="Semiheavy Water" color=lightgray style=filled]
+	"Semiheavy Water" -> 31
+	"Impure Heavy Hydrogen Sulfide" [label="Impure Heavy Hydrogen Sulfide" color=lightgray style=filled]
+	31 -> "Impure Heavy Hydrogen Sulfide"
+	31 -> "Distilled Water"
+	32 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" -> 32
+	"Impure Semiheavy Water" [label="Impure Semiheavy Water" color=lightgray style=filled]
+	"Impure Semiheavy Water" -> 32
+	32 -> "Semiheavy Hydrogen Sulfide"
+	"Steam 33" [label=Steam color=red style=filled]
+	32 -> "Steam 33"
+	34 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Water" [label="Impure Semiheavy Water" color=lightgray style=filled]
+	"Impure Semiheavy Water" -> 34
+	"Isotopically Pure Hydrogen Sulfide" [label="Isotopically Pure Hydrogen Sulfide" color=lightgray style=filled]
+	"Isotopically Pure Hydrogen Sulfide" -> 34
+	34 -> "Impure Semiheavy Hydrogen Sulfide"
+	"Salt Water" [label="Salt Water" color=lightgray style=filled]
+	34 -> "Salt Water"
+	35 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" [label="Impure Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Impure Semiheavy Hydrogen Sulfide" -> 35
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 35
+	35 -> "Impure Semiheavy Water"
+	"Hydrogen Sulfide" [label="Hydrogen Sulfide" color=lightgray style=filled]
+	35 -> "Hydrogen Sulfide"
+	36 [label="Large Chemical Reactor
+480 Eu/t (HV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Hydrogen Sulfide" [label="Hydrogen Sulfide" color=lightgray style=filled]
+	"Hydrogen Sulfide" -> 36
+	"Sea Water" [label="Sea Water" color=lightgray style=filled]
+	"Sea Water" -> 36
+	36 -> "Impure Semiheavy Water"
+	36 -> "Isotopically Pure Hydrogen Sulfide"
+	37 [label="Large Chemical Reactor
+480 Eu/t (HV)
+50.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Semiheavy Hydrogen Sulfide" [label="Semiheavy Hydrogen Sulfide" color=lightgray style=filled]
+	"Semiheavy Hydrogen Sulfide" -> 37
+	"Distilled Water" [label="Distilled Water" color=lightgray style=filled]
+	"Distilled Water" -> 37
+	37 -> "Semiheavy Water"
+	37 -> "Hydrogen Sulfide"
+	38 [label="Batch Reactor
+30 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Caprylic Acid" [label="Caprylic Acid" color=lightgray style=filled]
+	"Caprylic Acid" -> 38
+	"Thionyl Chloride" [label="Thionyl Chloride" color=lightgray style=filled]
+	"Thionyl Chloride" -> 38
+	"Octanoyl Chloride" [label="Octanoyl Chloride" color=lightgray style=filled]
+	38 -> "Octanoyl Chloride"
+	"Hydrogen Chloride" [label="Hydrogen Chloride" color=lightgray style=filled]
+	38 -> "Hydrogen Chloride"
+	38 -> "Sulfur Dioxide"
+	39 [label="Batch Reactor
+30 Eu/t (LV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Chromium Trioxide Dust" [label="Chromium Trioxide Dust" color=lightgray style=filled]
+	"Chromium Trioxide Dust" -> 39
+	"N Octanol" [label="N Octanol" color=lightgray style=filled]
+	"N Octanol" -> 39
+	"Sulfuric Acid" [label="Sulfuric Acid" color=lightgray style=filled]
+	"Sulfuric Acid" -> 39
+	Acetone [label=Acetone color=lightgray style=filled]
+	Acetone -> 39
+	39 -> "Caprylic Acid"
+	"Chromium Sulfate Solution" [label="Chromium Sulfate Solution" color=lightgray style=filled]
+	39 -> "Chromium Sulfate Solution"
+	40 [label="Distillation Tower
+30 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sodium Sulfate Acetone Solution" [label="Sodium Sulfate Acetone Solution" color=lightgray style=filled]
+	"Sodium Sulfate Acetone Solution" -> 40
+	"Sodium Sulfate Dust" [label="Sodium Sulfate Dust" color=lightgray style=filled]
+	40 -> "Sodium Sulfate Dust"
+	40 -> Water
+	40 -> Acetone
+	41 [label="Batch Reactor
+30 Eu/t (LV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sodium Hydroxide Dust" [label="Sodium Hydroxide Dust" color=lightgray style=filled]
+	"Sodium Hydroxide Dust" -> 41
+	"Chromium Sulfate Solution" [label="Chromium Sulfate Solution" color=lightgray style=filled]
+	"Chromium Sulfate Solution" -> 41
+	"Chromium I I I Hydroxide Dust" [label="Chromium I I I Hydroxide Dust" color=lightgray style=filled]
+	41 -> "Chromium I I I Hydroxide Dust"
+	41 -> "Sodium Sulfate Acetone Solution"
+	42 [label="Distillery
+16 Eu/t (LV)
+3.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sodium Hydroxide Solution 43" [label="Sodium Hydroxide Solution" color=green style=filled]
+	"Sodium Hydroxide Solution 43" -> 42
+	42 -> Water
+	42 -> "Sodium Hydroxide Dust"
+	44 [label="Distillation Tower
+30 Eu/t (LV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Treated Sulfuric Refinery Gas" [label="Treated Sulfuric Refinery Gas" color=lightgray style=filled]
+	"Treated Sulfuric Refinery Gas" -> 44
+	44 -> "Refinery Gas"
+	"Sour Gas" [label="Sour Gas" color=lightgray style=filled]
+	44 -> "Sour Gas"
+	45 [label="Fixed Bed Reactor
+30 Eu/t (LV)
+1.5 seg" color=lightsalmon shape=hexagon style=filled]
+	"Sulfuric Refinery Gas" [label="Sulfuric Refinery Gas" color=lightgray style=filled]
+	"Sulfuric Refinery Gas" -> 45
+	Hydrogen [label=Hydrogen color=lightgray style=filled]
+	Hydrogen -> 45
+	"Alumina Catalyst Bed 46]" [label="Alumina Catalyst Bed (NC)" color=yellow style=filled]
+	"Alumina Catalyst Bed 46]" -> 45
+	45 -> "Treated Sulfuric Refinery Gas"
+	47 [label="Distillation Tower
+30 Eu/t (LV)
+5.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Desalted Oil" [label="Desalted Oil" color=lightgray style=filled]
+	"Desalted Oil" -> 47
+	"Sulfuric Oil Residue" [label="Sulfuric Oil Residue" color=lightgray style=filled]
+	47 -> "Sulfuric Oil Residue"
+	"Sulfuric Fuel Oil" [label="Sulfuric Fuel Oil" color=lightgray style=filled]
+	47 -> "Sulfuric Fuel Oil"
+	"Sulfuric Diesel" [label="Sulfuric Diesel" color=lightgray style=filled]
+	47 -> "Sulfuric Diesel"
+	"Sulfuric Kerosene" [label="Sulfuric Kerosene" color=lightgray style=filled]
+	47 -> "Sulfuric Kerosene"
+	"Sulfuric Naphtha" [label="Sulfuric Naphtha" color=lightgray style=filled]
+	47 -> "Sulfuric Naphtha"
+	"Sulfuric Gasoline" [label="Sulfuric Gasoline" color=lightgray style=filled]
+	47 -> "Sulfuric Gasoline"
+	47 -> "Sulfuric Refinery Gas"
+	48 [label="Centrifuge
+30 Eu/t (LV)
+13.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Oily Brine" [label="Oily Brine" color=lightgray style=filled]
+	"Oily Brine" -> 48
+	Brine [label=Brine color=lightgray style=filled]
+	48 -> Brine
+	48 -> "Desalted Oil"
+	49 [label="Electrostatic Separator
+30 Eu/t (LV)
+8.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Diluted Oil" [label="Diluted Oil" color=lightgray style=filled]
+	"Diluted Oil" -> 49
+	49 -> "Oily Brine"
+	49 -> "Desalted Oil"
+	50 [label="Mixer
+30 Eu/t (LV)
+10.0 seg" color=lightsalmon shape=hexagon style=filled]
+	"Water 51" [label=Water color=green style=filled]
+	"Water 51" -> 50
+	Oil [label=Oil color=lightgray style=filled]
+	Oil -> 50
+	50 -> "Diluted Oil"
 }

@@ -9,8 +9,8 @@ class Config:
         "Copper Ingot",
         "Carbon Dust",
         "Pyrite Dust",
-        "Carbon Dust"
-        "Sodium Hydroxide Solution"
+        "Carbon Dust",
+        "Sodium Hydroxide Solution",
     ]
 
     force_waste = [
